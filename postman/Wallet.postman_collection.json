@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/wallet/97D253C1-111A-4BDD-8621-B6332DC958D1",
+					"raw": "http://localhost:8081/api/v1/wallet/97D253C1-111A-4BDD-8621-B6332DC958D1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -43,7 +43,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/v1/wallet",
+					"raw": "http://localhost:8081/api/v1/wallet",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -90,7 +90,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/v1/wallet",
+					"raw": "http://localhost:8081/api/v1/wallet",
 					"protocol": "http",
 					"host": [
 						"localhost"
