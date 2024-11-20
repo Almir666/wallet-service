@@ -16,12 +16,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
+/**
+ * Service providing the logic of work with the wallet balance
+ */
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class WalletService {
     private final WalletRepository walletRepository;
 
+    /**
+     * Method responsible for rebalancing
+     * @param walletRequest query containing the operation data
+     * @return returns the response status
+     */
     @Transactional
     public ResponseEntity<Void> updateBalance(WalletRequest walletRequest) {
 
@@ -44,7 +53,11 @@ public class WalletService {
         return ResponseEntity.ok().build();
     }
 
-
+    /**
+     * Method responsible for rebalancing
+     * @param walletId wallet identifier
+     * @return returns a balance
+     */
     @Transactional(readOnly = true)
     public Long getBalance(UUID walletId) {
         return walletRepository.findById(walletId).orElseThrow(() -> new WalletNotFoundException("Wallet not found")).getBalance();
